@@ -25,7 +25,7 @@ describe("Invalid Password", () => {
     cy.visit('https://www.saucedemo.com/');
   });
   it('should display an error message with an invalid username', () => {
-    cy.get('input[name="username"]').type('chadmesmith');
+    cy.get('input[name="username"]').type('Tomesmith');
     cy.get('input[name="password"]').type('secret_sauce');
     cy.get('button[type="submit"]').click();
     cy.get('.error-message').should('contain', 'Username and password do not match any user in this service');
@@ -49,8 +49,8 @@ describe('Shopping Cart Functionality', () => {
 describe('Logout', () => {
   beforeEach(() => {
     cy.visit('https://www.saucedemo.com/');
-    cy.get('input[name="user-name"]').type('standard_user'); 
-    cy.get('input[name="password"]').type('secret_sauce'); 
+    cy.get('input[name="user-name"]').type('standard_user'); // Replace with a valid username
+    cy.get('input[name="password"]').type('secret_sauce'); // Replace with a valid password
     cy.get('.btn_action').click();
   });
   it('should allow the user to log out', () => {
