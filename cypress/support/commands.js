@@ -26,8 +26,8 @@
 
 Cypress.Commands.add('login', (username, password) => {
     cy.visit('https://www.saucedemo.com/');
-    cy.get('input[name="user-name"]').type(standard_user);
-    cy.get('input[name="password"]').type(secret_sauce);
+    cy.get('input[name="user-name"]').type(username);
+    cy.get('input[name="password"]').type(password);
     cy.get('.btn_action').click();
   });
   
